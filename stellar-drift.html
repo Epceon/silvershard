@@ -1,81 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SilverShard Studios</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #1c1c1c;
-      color: #e0e0e0;
-      text-align: center;
-    }
-    header {
-      padding: 30px 20px;
-    }
-    header h1 {
-      margin: 0;
-      color: #d0d0d0;
-      font-size: 2.5em;
-      font-weight: 500;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      padding: 20px;
-    }
-    nav a {
-      background-color: #333;
-      color: #ccc;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: 500;
-      transition: background-color 0.2s;
-    }
-    nav a:hover {
-      background-color: #555;
-    }
-    section {
-      padding: 60px 40px;
-      max-width: 1000px;
-      margin: 0 auto;
-      text-align: left;
-    }
-    .project img {
-      width: 280px;
-      height: auto;
-      border: 1px solid #444;
-      border-radius: 8px;
-    }
-    a.button-link {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #444;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: 500;
-    }
-    a.button-link:hover {
-      background-color: #666;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stellar Drift - SilverShard Studios</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <header><h1>Stellar Drift</h1></header>
-  <nav><a href="index.html">← Back to Home</a></nav>
-  <section>
-    <img src="images/stellar_drift.jpg" alt="Stellar Drift" style="max-width: 100%; border-radius: 12px; margin-bottom: 30px;" />
-    <p>Stellar Drift is a fast-paced mobile space game inspired by arcade shooters. Join a shared universe, fly forward through alien territory, and shoot your way to the top with idle-friendly mechanics.</p>
-    <p><strong>Screenshots and trailer coming soon.</strong></p>
-  </section>
+  <header>
+    <h1>SilverShard Studios</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <div class="main-content">
+      <section class="info-section about">
+
+        <h2>Stellar Drift</h2>
+        <p>
+          <b>Genre:</b> Space survival & exploration<br>
+          <b>Platforms:</b> PC (Steam)
+        </p>
+
+        <p>
+          Stellar Drift is a thrilling space survival and exploration game where you pilot your ship through dangerous asteroid fields, mysterious cosmic storms, and discover lost outposts. Upgrade your vessel, gather resources, and see how far you can drift among the stars!
+        </p>
+
+        <img src="images/stellar_drift_1.jpg" alt="Stellar Drift gameplay" style="width:100%; max-width: 520px; display:block; margin: 36px auto 22px auto; border-radius:14px; box-shadow:0 2px 10px #0002;">
+
+        <p>
+          Every journey in Stellar Drift is unique, with procedurally generated space environments and a variety of challenges. 
+        </p>
+
+        <img src="images/stellar_drift_2.jpg" alt="Stellar Drift upgrades" style="width:100%; max-width: 520px; display:block; margin: 36px auto 22px auto; border-radius:14px; box-shadow:0 2px 10px #0002;">
+
+        <p>
+          <b>Features:</b><br>
+          – Dynamic space environments<br>
+          – Deep upgrade system<br>
+          – Atmospheric soundtrack<br>
+          – Leaderboards and achievements<br>
+        </p>
+
+        <p>
+          <b>Wishlist on Steam or follow our dev blog for updates!</b>
+        </p>
+      </section>
+    </div>
+  </main>
+  <footer>
+    &copy; 2025 SilverShard Studios. All rights reserved.
+  </footer>
 </body>
 </html>

@@ -1,0 +1,297 @@
+/* Reset og grunnstil */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #15191e;
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+
+/* Header og meny */
+header {
+  background: #23272e;
+  padding: 24px 0 16px 0;
+  text-align: center;
+  box-shadow: 0 2px 10px #0003;
+}
+
+header h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  color: #aeb4bf;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+nav a {
+  color: #eee;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+nav a:hover, nav a.active {
+  background: #32374a;
+  color: #3fa7ff;
+}
+
+/* Hovedinnhold sentreres på alle sider med lik max-width og luft */
+.main-content {
+  max-width: 840px;
+  margin: 54px auto 0 auto; /* 54px luft under header, auto for å sentrere */
+  padding: 0 0px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Spillkort - index */
+.games {
+  width: 100%;
+}
+
+.game-card {
+  background: #212733;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #0005;
+  display: flex;
+  align-items: center;
+  padding: 32px;
+  margin-bottom: 28px;
+  gap: 36px;
+  transition: box-shadow 0.2s, transform 0.15s;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.game-card:hover, .game-card:focus {
+  box-shadow: 0 6px 32px #0008;
+  border: 2px solid #3fa7ff;
+  transform: translateY(-3px) scale(1.02);
+  text-decoration: none;
+  outline: none;
+}
+
+.game-card img {
+  width: 330px;
+  height: 190px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 2px 12px #0004;
+  background: #181a1f;
+  transition: transform 0.15s;
+}
+
+.game-info {
+  flex: 1;
+  text-align: left;
+  width: 100%;
+}
+
+.game-info h2 {
+  margin-top: 0;
+  color: #3fa7ff;
+  font-size: 1.6rem;
+}
+
+.game-info p {
+  margin: 16px 0 18px 0;
+  color: #eee;
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+/* Blog-kort */
+.blogs {
+  width: 100%;
+}
+
+.blog-card {
+  background: #23272e;
+  border-radius: 16px;
+  box-shadow: 0 3px 16px #0003;
+  margin-bottom: 32px;
+  padding: 30px 28px 24px 28px;
+  color: #eee;
+  transition: box-shadow 0.17s, transform 0.13s;
+}
+
+.blog-card:hover {
+  box-shadow: 0 8px 32px #0007;
+  transform: scale(1.01) translateY(-2px);
+}
+
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.blog-title {
+  color: #3fa7ff;
+  font-size: 1.4rem;
+  margin: 0 0 6px 0;
+  font-weight: 600;
+}
+
+.blog-date {
+  color: #bbb;
+  font-size: 0.99rem;
+  margin-left: 18px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.blog-card p {
+  margin: 10px 0 0 0;
+  font-size: 1.08rem;
+  line-height: 1.62;
+  color: #eee;
+  text-align: left;
+}
+
+/* Info-seksjon (About, Contact) */
+.info-section.about {
+  background: #23272e;
+  border-radius: 18px;
+  box-shadow: 0 2px 14px #0003;
+  color: #eee;
+  text-align: left;
+  line-height: 1.65;
+  font-size: 1.13rem;
+  margin-bottom: 48px;
+  padding: 38px 38px 38px 38px;
+}
+
+.info-section.about h2 {
+  color: #3fa7ff;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+.info-section.about a {
+  color: #3fa7ff;
+  word-break: break-all;
+}
+
+/* Footer */
+footer {
+  background: #181a1f;
+  color: #aaa;
+  text-align: center;
+  padding: 18px 0 14px 0;
+  font-size: 0.98rem;
+  letter-spacing: 0.6px;
+  border-top: 1px solid #23272e;
+  flex-shrink: 0;
+  margin-top: auto;
+}
+
+/* Responsivitet */
+@media (max-width: 900px) {
+  .main-content {
+    max-width: 98vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+  .game-card {
+    flex-direction: column;
+    align-items: center;
+    padding: 18px;
+    gap: 18px;
+  }
+  .game-card img {
+    width: 96vw;
+    max-width: 380px;
+    height: 170px;
+  }
+  .info-section.about, .blog-card {
+    padding: 18px 4vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-content {
+    padding-top: 24px;
+  }
+  .info-section.about, .blog-card {
+    padding: 12px 2vw;
+    font-size: 1.01rem;
+  }
+  .blog-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .blog-date {
+    margin-left: 0;
+    margin-top: 2px;
+    font-size: 0.97rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.3rem;
+  }
+  .game-card img {
+    max-width: 94vw;
+    min-width: 160px;
+  }
+}
+
+.game-buttons {
+  margin-top: 34px;
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.action-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  font-size: 1.13rem;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #eee;
+  background: #232733;
+  box-shadow: 0 2px 12px #0003;
+  transition: 
+    background 0.18s, 
+    color 0.18s, 
+    transform 0.11s,
+    box-shadow 0.18s;
+  border: none;
+  outline: none;
+  letter-spacing: 0.3px;
+}
+
+.action-btn:hover,
+.action-btn:focus {
+  background: #236ca4;
+  color: #fff;
+  box-shadow: 0 4px 18px #236ca455;
+  transform: translateY(-2px) scale(1.04);
+  text-decoration: none;
+}
+

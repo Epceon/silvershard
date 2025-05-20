@@ -1,81 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SilverShard Studios</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #1c1c1c;
-      color: #e0e0e0;
-      text-align: center;
-    }
-    header {
-      padding: 30px 20px;
-    }
-    header h1 {
-      margin: 0;
-      color: #d0d0d0;
-      font-size: 2.5em;
-      font-weight: 500;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      padding: 20px;
-    }
-    nav a {
-      background-color: #333;
-      color: #ccc;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 6px;
-      font-weight: 500;
-      transition: background-color 0.2s;
-    }
-    nav a:hover {
-      background-color: #555;
-    }
-    section {
-      padding: 60px 40px;
-      max-width: 1000px;
-      margin: 0 auto;
-      text-align: left;
-    }
-    .project img {
-      width: 280px;
-      height: auto;
-      border: 1px solid #444;
-      border-radius: 8px;
-    }
-    a.button-link {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #444;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: 500;
-    }
-    a.button-link:hover {
-      background-color: #666;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Void Vanguards - SilverShard Studios</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-  <header><h1>Void Vanguards</h1></header>
-  <nav><a href="index.html">← Back to Home</a></nav>
-  <section>
-    <img src="images/void_vanguards.jpg" alt="Void Vanguards" style="max-width: 100%; border-radius: 12px; margin-bottom: 30px;" />
-    <p>Void Vanguards is a wave-based sci-fi action shooter. You travel to alien planets, survive increasingly difficult enemy waves, and collect gears to unlock new weapons and upgrades. Built in Unreal Engine with tight combat, stylish visuals, and rogue-like progression.</p>
-    <a href="https://store.steampowered.com/app/3331770/Void_Vanguards/" class="button-link" target="_blank">View on Steam</a>
-  </section>
+  <header>
+    <h1>SilverShard Studios</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <div class="main-content">
+      <section class="info-section about">
+
+        <h2>Void Vanguards</h2>
+        <p>
+          <b>Genre:</b> Sci-fi Action Shooter<br>
+          <b>Platforms:</b> PC (Steam)
+        </p>
+
+        <p>
+          Step into the Void and prove your skills! Void Vanguards is a fast-paced sci-fi action shooter where you travel between mysterious planets, battling waves of relentless alien enemies and upgrading your arsenal with powerful weapons and abilities.
+        </p>
+
+        <img src="images/void_vanguards_1.jpg" alt="Void Vanguards gameplay" style="width:100%; max-width: 520px; display:block; margin: 36px auto 22px auto; border-radius:14px; box-shadow:0 2px 10px #0002;">
+
+        <p>
+          Survive as long as you can, unlock new gear, and climb the global leaderboards. With high-quality visuals and tight controls, Void Vanguards is a test of reflexes and strategy for any action fan!
+        </p>
+
+        <img src="images/void_vanguards_2.jpg" alt="Void Vanguards weapons" style="width:100%; max-width: 520px; display:block; margin: 36px auto 22px auto; border-radius:14px; box-shadow:0 2px 10px #0002;">
+
+        <p>
+          <b>Features:</b><br>
+          – 3 playable planets<br>
+          – Endless arena mode<br>
+          – 10+ upgradable weapons<br>
+          – Dozens of enemy types<br>
+          – Steam leaderboards and achievements<br>
+        </p>
+
+        <p>
+          We’re proud to announce that Void Vanguards is now available on Steam! After months of development, testing, and invaluable feedback from our community, everyone can finally explore planets, battle waves of enemies, and collect new weapons and upgrades. Thank you all for your support and input along the way—this is only the beginning of the journey!
+        </p>
+
+<div class="game-buttons">
+  <a href="https://store.steampowered.com/app/2824240/Void_Vanguards/" target="_blank" class="action-btn">View on Steam</a>
+  <a href="https://discord.gg/cXQZvmF8Cw" target="_blank" class="action-btn">Join Discord</a>
+</div>
+
+
+      </section>
+    </div>
+  </main>
+  <footer>
+    &copy; 2025 SilverShard Studios. All rights reserved.
+  </footer>
 </body>
 </html>
