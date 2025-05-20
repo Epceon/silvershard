@@ -14,7 +14,6 @@ html {
   overflow-y: scroll;
 }
 
-
 /* Header og meny */
 header {
   background: #23272e;
@@ -246,6 +245,26 @@ footer {
     margin-top: 2px;
     font-size: 0.97rem;
   }
+
+  /* --- MOBIL: Mer luft på sidene av kortene, diskret border --- */
+  .game-card, .blog-card, .info-section.about {
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 14px;
+    border: 1.5px solid #23272e;
+    box-sizing: border-box;
+  }
+
+  /* --- MOBIL: Menyen blir strammere, knappene holder seg på én linje --- */
+  nav {
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  nav a {
+    padding: 6px 10px;
+    font-size: 0.98rem;
+    white-space: nowrap;
+  }
 }
 
 @media (max-width: 480px) {
@@ -294,4 +313,3 @@ footer {
   transform: translateY(-2px) scale(1.04);
   text-decoration: none;
 }
-
