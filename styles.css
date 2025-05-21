@@ -3,8 +3,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #15191e;
-  color: #eee;
+  background: #252424; /* mørkere bakgrunn bak kortene */
+  color: #C0C0C0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,9 +16,11 @@ html {
 
 /* Header og meny */
 header {
-  background: #23272e;
-  padding: 24px 0 16px 0;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  background-color: #2e2c2c; /* samme som kortene, men lysere enn bakgrunn */
   box-shadow: 0 2px 10px #0003;
 }
 
@@ -26,46 +28,57 @@ header h1 {
   margin: 0 0 10px 0;
   font-size: 2.2rem;
   letter-spacing: 2px;
-  color: #aeb4bf;
+  color: #C0C0C0;
+}
+
+header img {
+  height: 100px;
+  max-width: none;
+  width: auto;
+  margin-bottom: 30px;
 }
 
 nav {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
+  gap: 15px;
 }
 
 nav a {
-  color: #eee;
   text-decoration: none;
-  font-weight: 500;
-  padding: 6px 16px;
-  border-radius: 6px;
-  transition: background 0.2s;
+  color: #C0C0C0;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 6px 12px;
+  transition: background-color 0.3s;
+  border-radius: 4px;
 }
 
-nav a:hover, nav a.active {
-  background: #32374a;
-  color: #3fa7ff;
+nav a:hover,
+nav a.active {
+  background-color: rgba(192, 192, 192, 0.1);
+  color: #fff;
 }
 
-/* Hovedinnhold sentreres på alle sider med lik max-width og luft */
+/* Hovedinnhold */
 .main-content {
   max-width: 840px;
-  margin: 54px auto 0 auto; /* 54px luft under header, auto for å sentrere */
-  padding: 0 0px;
+  margin: 54px auto 0 auto;
+  padding: 0;
   width: 100%;
   box-sizing: border-box;
 }
 
-/* Spillkort - index */
+/* Spillkort */
 .games {
   width: 100%;
 }
 
 .game-card {
-  background: #212733;
+  background: #2e2c2c;
   border-radius: 18px;
+  border: none;
   box-shadow: 0 4px 24px #0005;
   display: flex;
   align-items: center;
@@ -74,14 +87,13 @@ nav a:hover, nav a.active {
   gap: 36px;
   transition: box-shadow 0.2s, transform 0.15s;
   text-decoration: none;
-  color: inherit;
+  color: #C0C0C0;
   cursor: pointer;
-  border: 2px solid transparent;
 }
 
 .game-card:hover, .game-card:focus {
-  box-shadow: 0 6px 32px #0008;
-  border: 2px solid #3fa7ff;
+  box-shadow: 0 6px 32px rgba(192, 192, 192, 0.2);
+  border: 1px solid #C0C0C0;
   transform: translateY(-3px) scale(1.02);
   text-decoration: none;
   outline: none;
@@ -105,13 +117,13 @@ nav a:hover, nav a.active {
 
 .game-info h2 {
   margin-top: 0;
-  color: #3fa7ff;
+  color: #C0C0C0;
   font-size: 1.6rem;
 }
 
 .game-info p {
   margin: 16px 0 18px 0;
-  color: #eee;
+  color: #C0C0C0;
   font-size: 1.08rem;
   line-height: 1.6;
 }
@@ -122,20 +134,21 @@ nav a:hover, nav a.active {
 }
 
 .blog-card {
-  background: #23272e;
+  background: #2e2c2c;
   border-radius: 16px;
+  border: none;
   box-shadow: 0 3px 16px #0003;
   margin-bottom: 32px;
   padding: 30px 28px 24px 28px;
-  color: #eee;
+  color: #C0C0C0;
   transition: box-shadow 0.17s, transform 0.13s;
 }
-
+/*
 .blog-card:hover {
   box-shadow: 0 8px 32px #0007;
   transform: scale(1.01) translateY(-2px);
 }
-
+*/
 .blog-header {
   display: flex;
   justify-content: space-between;
@@ -145,14 +158,14 @@ nav a:hover, nav a.active {
 }
 
 .blog-title {
-  color: #3fa7ff;
+  color: #C0C0C0;
   font-size: 1.4rem;
   margin: 0 0 6px 0;
   font-weight: 600;
 }
 
 .blog-date {
-  color: #bbb;
+  color: #aaa;
   font-size: 0.99rem;
   margin-left: 18px;
   font-weight: 400;
@@ -163,38 +176,39 @@ nav a:hover, nav a.active {
   margin: 10px 0 0 0;
   font-size: 1.08rem;
   line-height: 1.62;
-  color: #eee;
+  color: #C0C0C0;
   text-align: left;
 }
 
-/* Info-seksjon (About, Contact) */
+/* Info-seksjon */
 .info-section.about {
-  background: #23272e;
+  background: #2e2c2c;
   border-radius: 18px;
   box-shadow: 0 2px 14px #0003;
-  color: #eee;
+  border: none;
+  color: #C0C0C0;
   text-align: left;
   line-height: 1.65;
   font-size: 1.13rem;
   margin-bottom: 48px;
-  padding: 38px 38px 38px 38px;
+  padding: 38px;
 }
 
 .info-section.about h2 {
-  color: #3fa7ff;
+  color: #C0C0C0;
   text-align: center;
   margin-top: 0;
   margin-bottom: 28px;
 }
 
 .info-section.about a {
-  color: #3fa7ff;
-  word-break: break-all;
+  color: #C0C0C0;
+  word-break: break-word;
 }
 
 /* Footer */
 footer {
-  background: #181a1f;
+  background: #2e2c2c;
   color: #aaa;
   text-align: center;
   padding: 18px 0 14px 0;
@@ -204,6 +218,9 @@ footer {
   flex-shrink: 0;
   margin-top: auto;
 }
+
+/* ... Resten av CSS beholdes uendret ... */
+
 
 /* Responsivitet */
 @media (max-width: 900px) {
@@ -233,21 +250,20 @@ footer {
     padding-top: 24px;
   }
 
-.game-card img {
-  width: 100%;
-  max-width: 340px;
-  min-width: 150px;
-  height: 150px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
-  border-radius: 14px;
-  border: 1.5px solid #23272e;
-  box-shadow: 0 2px 10px #0004;
-  background: #181a1f;
-  box-sizing: border-box;
-}
-
+  .game-card img {
+    width: 100%;
+    max-width: 340px;
+    min-width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: 14px;
+    border: 1.5px solid #23272e;
+    box-shadow: 0 2px 10px #0004;
+    background: #181a1f;
+    box-sizing: border-box;
+  }
 
   .info-section.about, .blog-card {
     padding: 12px 2vw;
@@ -262,8 +278,6 @@ footer {
     margin-top: 2px;
     font-size: 0.97rem;
   }
-
-  /* --- MOBIL: Mer luft på sidene av kortene, diskret border --- */
   .game-card, .blog-card, .info-section.about {
     margin-left: 8px;
     margin-right: 8px;
@@ -271,8 +285,6 @@ footer {
     border: 1.5px solid #23272e;
     box-sizing: border-box;
   }
-
-  /* --- MOBIL: Menyen blir strammere, knappene holder seg på én linje --- */
   nav {
     gap: 6px;
     flex-wrap: wrap;
@@ -294,6 +306,7 @@ footer {
   }
 }
 
+/* Knapper */
 .game-buttons {
   margin-top: 34px;
   display: flex;
@@ -309,24 +322,20 @@ footer {
   border-radius: 10px;
   font-weight: 600;
   text-decoration: none;
-  color: #eee;
-  background: #232733;
+  color: #C0C0C0;
+  background: #2e2c2c;
   box-shadow: 0 2px 12px #0003;
-  transition: 
-    background 0.18s, 
-    color 0.18s, 
-    transform 0.11s,
-    box-shadow 0.18s;
-  border: none;
+  transition: background 0.18s, color 0.18s, transform 0.11s, box-shadow 0.18s;
+  border: 1px solid #C0C0C0;
   outline: none;
   letter-spacing: 0.3px;
 }
 
 .action-btn:hover,
 .action-btn:focus {
-  background: #236ca4;
+  background: rgba(192, 192, 192, 0.15);
   color: #fff;
-  box-shadow: 0 4px 18px #236ca455;
+  box-shadow: 0 4px 18px rgba(192, 192, 192, 0.2);
   transform: translateY(-2px) scale(1.04);
   text-decoration: none;
 }
