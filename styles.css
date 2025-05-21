@@ -154,7 +154,7 @@ nav a.active {
 @media (max-width: 600px) {
   .blog-card,
   .info-section.about {
-    padding: 14px 20px;
+    padding: 30px 20px;
   }
 }
 
