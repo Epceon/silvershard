@@ -38,6 +38,13 @@ header img {
   margin-bottom: 30px;
 }
 
+@media (max-width: 600px) {
+  header img {
+    height: 48px; /* eller lavere, f.eks. 40px om ønskelig */
+    max-width: 90vw;
+  }
+}
+
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -143,6 +150,14 @@ nav a.active {
   color: #C0C0C0;
   transition: box-shadow 0.17s, transform 0.13s;
 }
+
+@media (max-width: 600px) {
+  .blog-card,
+  .info-section.about {
+    padding: 14px 10px;
+  }
+}
+
 /*
 .blog-card:hover {
   box-shadow: 0 8px 32px #0007;
