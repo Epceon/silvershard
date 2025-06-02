@@ -1,5 +1,3 @@
-const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
-
 exports.handler = async function(event, context) {
   const API_KEY = "14FD3B8969C12D5F24D06833B72EC023";
   const APP_ID = "3331770";
@@ -19,7 +17,7 @@ exports.handler = async function(event, context) {
   if (!leaderboardId) {
     return {
       statusCode: 404,
-      body: JSON.stringify({ error: "Leaderboard not found!" }),
+      body: JSON.stringify({ error: "Leaderboard not found" }),
     };
   }
 
