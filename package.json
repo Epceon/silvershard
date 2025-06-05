@@ -1,0 +1,12 @@
+{
+  "name": "silvershard",
+  "version": "1.0.0",
+  "description": "Website and functions",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nock": "^13.4.0"
+  }
+}
