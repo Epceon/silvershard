@@ -1,5 +1,7 @@
 const nock = require('nock');
 const { handler } = require('../leaderboards');
+const fetch = require('node-fetch');
+global.fetch = fetch;
 
 describe('leaderboards function', () => {
   afterEach(() => {
